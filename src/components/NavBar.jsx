@@ -36,19 +36,24 @@ const InternalNavLink = styled(NavLink)`
   }
 `;
 
+const sections = [
+  { title: 'Home', href: '/' },
+  { title: 'About', href: '/about' },
+  { title: 'Skills', href: '/skills' },
+  { title: 'Education', href: '/education' },
+  { title: 'Work', href: '/projects' },
+  { title: 'Resume', href: '/' }, // TODO: add a real resume url
+];
+
+const logo = {
+  height: 45,
+  source: 'images/logo.png',
+  width: 50,
+};
+
 const NavBar = () => {
   const theme = useContext(ThemeContext);
-  const [data, setData] = useState(null);
   const [expanded, setExpanded] = useState(false);
-
-  useEffect(() => {
-    fetch(endpoints.navbar, {
-      method: 'GET',
-    })
-      .then((res) => res.json())
-      .then((res) => setData(res))
-      .catch((err) => err);
-  }, []);
 
   return (
     <Navbar
@@ -60,20 +65,18 @@ const NavBar = () => {
       expanded={expanded}
     >
       <Container>
-        {data?.logo && (
-          <Navbar.Brand href="/">
-            <img
-              src={data?.logo?.source}
-              className="d-inline-block align-top"
-              alt="main logo"
-              style={
-                data?.logo?.height && data?.logo?.width
-                  ? { height: data?.logo?.height, width: data?.logo?.width }
-                  : styles.logoStyle
-              }
-            />
-          </Navbar.Brand>
-        )}
+        <Navbar.Brand href="/">
+          <img
+            src={logo.source}
+            className="d-inline-block align-top"
+            alt="main logo"
+            style={
+              logo?.height && logo?.width
+                ? { height: logo.height, width: logo.width }
+                : styles.logoStyle
+            }
+          />
+        </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => setExpanded(!expanded)}
@@ -81,8 +84,8 @@ const NavBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto" />
           <Nav>
-            {data
-              && data.sections?.map((section, index) => (section?.type === 'link' ? (
+            {sections.map((section, index) =>
+              section?.type === 'link' ? (
                 <ExternalNavLink
                   key={section.title}
                   href={section.href}
@@ -106,11 +109,10 @@ const NavBar = () => {
                 >
                   {section.title}
                 </InternalNavLink>
-              )))}
+              )
+            )}
           </Nav>
-          <ThemeToggler
-            onClick={() => setExpanded(false)}
-          />
+          <ThemeToggler onClick={() => setExpanded(false)} />
         </Navbar.Collapse>
       </Container>
     </Navbar>

@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Typewriter from 'typewriter-effect';
 import Fade from 'react-reveal';
-import endpoints from '../constants/endpoints';
 import Social from './Social';
-import FallbackSpinner from './FallbackSpinner';
 
 const styles = {
   nameStyle: {
@@ -21,36 +19,30 @@ const styles = {
   },
 };
 
+/*
+  TODO: make my repositories public (decide if also the bucks fan page)
+  TODO: change the logo of this website (can use ai to generate the new one)
+*/
+
 function Home() {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    fetch(endpoints.home, {
-      method: 'GET',
-    })
-      .then((res) => res.json())
-      .then((res) => setData(res))
-      .catch((err) => err);
-  }, []);
-
-  return data ? (
+  return (
     <Fade>
       <div style={styles.mainContainer}>
-        <h1 style={styles.nameStyle}>{data?.name}</h1>
+        <h1 style={styles.nameStyle}>Peled Koren</h1>
         <div style={{ flexDirection: 'row' }}>
-          <h2 style={styles.inlineChild}>I&apos;m&nbsp;</h2>
+          <h2 style={styles.inlineChild}>I&apos;m&nbsp;a&nbsp;</h2>
           <Typewriter
             options={{
               loop: true,
               autoStart: true,
-              strings: data?.roles,
+              strings: ['react developer', 'full stack developer'],
             }}
           />
         </div>
         <Social />
       </div>
     </Fade>
-  ) : <FallbackSpinner />;
+  );
 }
 
 export default Home;

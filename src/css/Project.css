@@ -1,0 +1,155 @@
+.project-container {
+  width: 95vw;
+  margin-top: 5px;
+}
+
+.project-container .project-text-container {
+  display: flex;
+  flex-direction: column;
+  width: 72vw;
+  margin-bottom: 20px;
+}
+
+.project-container .project-row {
+  display: flex;
+  width: 100%;
+  height: max-content;
+  align-items: center;
+  position: relative;
+  padding: 40px 3vw;
+  border-radius: 6px;
+  transition: 0.5s ease 0.2s;
+}
+
+.project-container .project-row.highlighted {
+  background-color: rgb(93, 93, 93) !important;
+}
+
+.dark-mode .project-container .project-row.even {
+  background-color: rgb(35, 35, 35);
+}
+
+.project-container .project-row.even {
+  background-color: #ccc;
+}
+
+.my-project-page .header {
+  margin-top: 4vh;
+}
+
+.project-container > .seperator {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  transition: 0.3s ease;
+  z-index: 1;
+}
+
+.dark-mode .seperator {
+  background-color: white !important;
+}
+
+.project-container .project-row .text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+}
+
+.project-container .project-row .text > h1 {
+  margin-bottom: 5vh;
+}
+
+.project-container .first-msg {
+  margin-bottom: 50px;
+}
+
+.project-intro {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.project-quick-scrolls {
+  position: fixed;
+  right: 1vw;
+  top: 30vh;
+  width: 22vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-quick-scrolls > h3 {
+  border-bottom: 1px solid black;
+  transition: 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.project-quick-scrolls > .project-switcher {
+  margin-bottom: 30px;
+  font-size: 21px;
+}
+
+.project-quick-scrolls > .project-switcher > span {
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: 600;
+}
+
+.project-quick-scrolls > .project-switcher > span.not-active {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.project-quick-scrolls > .project-switcher > span:hover {
+  color: #3d3d3d;
+}
+
+.dark-mode .project-quick-scrolls > .project-switcher > span:hover {
+  color: #c6c6c6;
+}
+
+.project-quick-scrolls > .links {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 80%;
+  padding-left: 15%;
+  text-align: center;
+}
+
+.project-quick-scrolls > .links > div {
+  width: 100%;
+  text-align: start;
+}
+
+.project-quick-scrolls > .links > div > p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.dark-mode .project-quick-scrolls > h3 {
+  border-bottom: 1px solid white;
+}
+
+.project-quick-scrolls p {
+  cursor: pointer;
+  color: #0000ee;
+  transition: 0.3s ease;
+  width: max-content;
+}
+
+.dark-mode .project-quick-scrolls p {
+  color: #0073ee;
+}
+
+.project-quick-scrolls p:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.dark-mode .project-quick-scrolls p:hover {
+  color: #0077b3;
+}
