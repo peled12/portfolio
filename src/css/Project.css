@@ -65,14 +65,14 @@
 }
 
 .project-intro {
+  width: 30vw;
   margin-top: 30px;
-  margin-bottom: 30px;
 }
 
 .project-quick-scrolls {
   position: fixed;
   right: 1vw;
-  top: 30vh;
+  top: 100px;
   width: 22vw;
   display: flex;
   flex-direction: column;
@@ -116,6 +116,7 @@
   width: 80%;
   padding-left: 15%;
   text-align: center;
+  gap: 5px;
 }
 
 .project-quick-scrolls > .links > div {
@@ -128,6 +129,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;
+  margin: 0;
 }
 
 .dark-mode .project-quick-scrolls > h3 {

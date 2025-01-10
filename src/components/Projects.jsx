@@ -100,6 +100,10 @@ const JOB_LISTING = [
   },
 ];
 
+/*
+  TODO: fix styling with quickScroll
+*/
+
 function MyProject() {
   useEffect(() => {
     const sr = ScrollReveal();
@@ -135,10 +139,10 @@ function MyProject() {
 
   return (
     <div className="work-page">
-      <h4 className="project-intro">
+      <h6 className="project-intro">
         Here are some projects i made to showcase my full-stack engineering
         skills (besides this one)
-      </h4>
+      </h6>
       <div className="project-container bucks-page">
         <div className="BucksFanPage-header-container reveal">
           <Header title="Bucks Fan Page" />

@@ -32,6 +32,10 @@ const text = [
   },
 ];
 
+/*
+  TODO: fix styling with quickScroll
+*/
+
 function About() {
   useEffect(() => {
     const sr = ScrollReveal();
