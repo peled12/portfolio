@@ -100,10 +100,6 @@ const JOB_LISTING = [
   },
 ];
 
-/*
-  TODO: fix styling with quickScroll
-*/
-
 function MyProject() {
   useEffect(() => {
     const sr = ScrollReveal();

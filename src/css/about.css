@@ -1,5 +1,5 @@
 .about-container {
-  width: 80vw;
+  width: 78vw;
   gap: 5vw;
   display: flex;
   justify-content: space-between;
@@ -7,14 +7,14 @@
   align-items: start;
   flex-grow: 0;
   position: relative;
-  left: 5vw;
+  left: 6vw;
 }
 
 .about-quick-scrolls {
   position: fixed;
-  left: 7.5vw;
-  top: 50vh;
-  translate: -50% -50%;
+  top: 100px;
+  left: 2vw;
+  width: 13vw;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -23,34 +23,79 @@
 .about-quick-scrolls > h3 {
   border-bottom: 1px solid black;
   transition: 0.3s ease;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.about-quick-scrolls > .project-switcher {
   margin-bottom: 30px;
+  font-size: 21px;
+}
+
+.about-quick-scrolls > .project-switcher > span {
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: 600;
+}
+
+.about-quick-scrolls > .project-switcher > span.not-active {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.about-quick-scrolls > .project-switcher > span:hover {
+  color: #3d3d3d;
+}
+
+.dark-mode .about-quick-scrolls > .project-switcher > span:hover {
+  color: #c6c6c6;
+}
+
+.about-quick-scrolls > .links {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 80%;
+  text-align: center;
+  gap: 5px;
+}
+
+.about-quick-scrolls > .links > div {
+  width: 100%;
+  text-align: start;
+}
+
+.about-quick-scrolls > .links > div > p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  margin: 0;
 }
 
 .dark-mode .about-quick-scrolls > h3 {
   border-bottom: 1px solid white;
 }
 
-.about-quick-scrolls > p {
+.about-quick-scrolls p {
   cursor: pointer;
   color: #0000ee;
   transition: 0.3s ease;
-  width: 100%;
-  text-align: start;
+  width: max-content;
 }
 
-.dark-mode .about-quick-scrolls > p {
+.dark-mode .about-quick-scrolls p {
   color: #0073ee;
 }
 
-.about-quick-scrolls > p:hover {
+.about-quick-scrolls p:hover {
   color: #0056b3;
   text-decoration: underline;
 }
 
-.dark-mode .about-quick-scrolls > p:hover {
+.dark-mode .about-quick-scrolls p:hover {
   color: #0077b3;
 }
-
 .about-container .text-container {
   display: flex;
   flex-direction: column;

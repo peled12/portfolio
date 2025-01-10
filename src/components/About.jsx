@@ -13,7 +13,7 @@ import quickScroll from './utils/quickScroll';
 
 import '../css/about.css';
 
-const text = [
+const TEXT = [
   {
     title: 'About Me',
     text: "<p>My name is Peled Koren, a 17-year-old junior full-stack developer with hands-on experience in building end-to-end web applications using ReactJS, Node.js, MongoDB and Socket.IO.</p><p>I am passionate about solving real-world problems through echnology and continuously learning to expand my skill set. Currently, I'm also advancing my Next.js + TypeScript skills with MySQL and Prisma TailwindCSS to enhance my development workflow and build more scalable and efficient applications.</p><p>Beyond coding, I enjoy playing basketball and am a dedicated fan of the Milwaukee Bucks NBA team. Combining my love for basketball and web development, I created a Bucks fan page (link to my project), where users can interact, create content, build their own fantasy rosters and much more.</p><p>This project not only allowed me to channel my passion but also significantly improved my skills in frontend design, API integration, and database management.</p>",
@@ -31,10 +31,6 @@ const text = [
     text: '<p><b>Passion for Learning</b>: I’m eager to learn new technologies and adapt to the ever-evolving tech landscape. Currently, I’m improving Next.js and TypeScript skills to enhance my development workflow and build more scalable applications.</p><p><b>Clear Documentation and Problem-Solving</b>: While I’m still building professional experience, I’ve developed strong communication habits by documenting my projects clearly, writing clean code and breaking down complex problems into manageable steps. This mindset helps me convey ideas effectively.</p><p><b>Commitment to Excellence</b>: I am determined to contribute meaningfully to a team, offering dedication, creativity, and problem-solving skills. My focus is on continuous improvement and delivering high-quality work.</p>',
   },
 ];
-
-/*
-  TODO: fix styling with quickScroll
-*/
 
 function About() {
   useEffect(() => {
@@ -59,15 +55,18 @@ function About() {
       <Header title="About Me" />
       <div className="about-quick-scrolls">
         <h3>Quick scroll</h3>
-        <p onClick={() => aboutQuickScroll(0)}>about Me</p>
-        <p onClick={() => aboutQuickScroll(1)}>What I Bring To The Table</p>
-        <p onClick={() => aboutQuickScroll(2)}>Key Technical Skills</p>
-        <p onClick={() => aboutQuickScroll(3)}>Why Choose Me?</p>
+        <div className="links">
+          {TEXT.map((obj, index) => (
+            <div key={index}>
+              <p onClick={() => aboutQuickScroll(index)}>{obj.title}</p>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="section-content-container about-container">
         <Fade>
           <div className="text-container">
-            {text.map((obj, index) => (
+            {TEXT.map((obj, index) => (
               <AboutSection
                 key={index}
                 text={obj.text}
