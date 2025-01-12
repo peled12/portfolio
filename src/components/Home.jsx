@@ -22,6 +22,7 @@ const styles = {
 /*
   TODO: make my repositories public (decide if also the bucks fan page)
   TODO: change the logo of this website (can use ai to generate the new one)
+  TODO: build the education page
 */
 
 function Home() {

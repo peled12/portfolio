@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import Fade from 'react-reveal';
 import Header from './Header';
 
-import ScrollReveal from 'scrollreveal';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import AboutSection from './AboutSection';
 
@@ -16,7 +17,7 @@ import '../css/about.css';
 const TEXT = [
   {
     title: 'About Me',
-    text: "<p>My name is Peled Koren, a 17-year-old junior full-stack developer with hands-on experience in building end-to-end web applications using ReactJS, Node.js, MongoDB and Socket.IO.</p><p>I am passionate about solving real-world problems through echnology and continuously learning to expand my skill set. Currently, I'm also advancing my Next.js + TypeScript skills with MySQL and Prisma TailwindCSS to enhance my development workflow and build more scalable and efficient applications.</p><p>Beyond coding, I enjoy playing basketball and am a dedicated fan of the Milwaukee Bucks NBA team. Combining my love for basketball and web development, I created a Bucks fan page (link to my project), where users can interact, create content, build their own fantasy rosters and much more.</p><p>This project not only allowed me to channel my passion but also significantly improved my skills in frontend design, API integration, and database management.</p>",
+    text: '<p>My name is Peled Koren, a 17-year-old junior full-stack developer with hands-on experience in building end-to-end web applications using ReactJS, Node.js, MongoDB and Socket.IO.</p><p>I am passionate about solving real-world problems through echnology and continuously learning to expand my skill set. Currently, I\'m also advancing my Next.js + TypeScript skills with MySQL and Prisma TailwindCSS to enhance my development workflow and build more scalable and efficient applications.</p><p>Beyond coding, I enjoy playing basketball and am a dedicated fan of the Milwaukee Bucks NBA team. Combining my love for basketball and web development, I created a Bucks fan page <a href="https://bucks-fan-page.vercel.app/">(link to it)</a>, where users can interact, create content, build their own fantasy rosters and much more.</p><p>This project not only allowed me to channel my passion but also significantly improved my skills in frontend design, API integration, and database management.</p>',
   },
   {
     title: 'What I Bring To The Table',
@@ -32,17 +33,18 @@ const TEXT = [
   },
 ];
 
+/*
+ TODO: change the text
+*/
+
 function About() {
   useEffect(() => {
-    const sr = ScrollReveal();
-    sr.reveal('.about-reveal > p', {
-      origin: 'bottom',
-      distance: '100px',
-      duration: '800',
-      delay: '25',
-      opacity: '0',
-      easing: 'ease',
-      reset: false,
+    AOS.init({
+      duration: 900,
+      delay: 25,
+      offset: 10,
+      easing: 'ease-in-out',
+      once: true,
     });
   }, []);
 
