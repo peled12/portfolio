@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 import '../css/Project.css';
 
-import ScrollReveal from 'scrollreveal';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 import Header from './Header';
 
@@ -100,21 +101,18 @@ const JOB_LISTING = [
   },
 ];
 
-function MyProject() {
+function Projects() {
   useEffect(() => {
-    const sr = ScrollReveal();
-    sr.reveal('.reveal', {
-      origin: 'bottom',
-      distance: '40px',
-      duration: '900',
-      delay: '15',
-      opacity: '0',
+    // initialize AOS
+    AOS.init({
+      duration: 800,
+      offset: 40, // distance before triggering the animation
       easing: 'ease-in-out',
-      reset: false,
+      once: false,
+      delay: 5,
     });
   }, []);
 
-  // boolean state for the quick scroll
   const [isBucksPageActive, setisBucksPageActive] = useState(true);
 
   function bucksPageQuickScroll(textNumber) {
@@ -136,23 +134,23 @@ function MyProject() {
   return (
     <div className="work-page">
       <h6 className="project-intro">
-        Here are some projects i made to showcase my full-stack engineering
-        skills (besides this one)
+        Here are some projects I made to showcase my full-stack engineering
+        skills (besides this one).
       </h6>
       <div className="project-container bucks-page">
-        <div className="BucksFanPage-header-container reveal">
+        <div className="BucksFanPage-header-container" data-aos="fade-up">
           <Header title="Bucks Fan Page" />
           <p className="first-msg">
-            Lets go through the features of the the fan page i've made.
+            Let's go through the features of the fan page I've made.
           </p>
         </div>
         <ProjectSection project={BUCKS_FAN_PAGE} />
       </div>
       <div className="project-container job-listing">
-        <div className="JobListing-header-container reveal">
+        <div className="JobListing-header-container" data-aos="fade-up">
           <Header title="Job Listing" />
           <p className="first-msg">
-            And here are the features of the Job listing page.
+            And here are the features of the Job Listing page.
           </p>
           <ProjectSection project={JOB_LISTING} />
         </div>
@@ -212,4 +210,4 @@ function MyProject() {
   );
 }
 
-export default MyProject;
+export default Projects;
