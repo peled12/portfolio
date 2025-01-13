@@ -34,7 +34,7 @@ import GIT_IMG from '../images/skills/git.png';
   TODO: add typescirpt and next js after learning
 */
 
-const skills = [
+const SKILLS = [
   {
     title: 'Languages & Databases',
     items: [
@@ -61,6 +61,9 @@ const skills = [
   },
 ];
 
+const SKILLS_INTRO =
+  'I love to learn new things and experiment with new technologies.\nThese are some of the major languages, technologies, tools and platforms I have worked with:';
+
 function Skills() {
   const renderSkillsIntro = (intro) => (
     <h4 style={styles.introTextContainer}>
@@ -70,13 +73,13 @@ function Skills() {
 
   return (
     <>
-      <Header title="Skills" />
+      <div data-aos="fade">
+        <Header title="Skills" />
+      </div>
       <div className="section-content-container" data-aos="fade">
         <Container>
-          {renderSkillsIntro(
-            'I love to learn new things and experiment with new technologies.\nThese are some of the major languages, technologies, tools and platforms I have worked with:'
-          )}
-          {skills.map((rows) => (
+          {renderSkillsIntro(SKILLS_INTRO)}
+          {SKILLS.map((rows) => (
             <div key={rows.title}>
               <br />
               <h3>{rows.title}</h3>

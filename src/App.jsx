@@ -9,6 +9,10 @@ import MainApp from './MainApp';
 import GlobalStyles from './theme/GlobalStyles';
 import { lightTheme, darkTheme } from './theme/themes';
 
+/*
+  TODO: replace useDarkMode
+*/
+
 function App() {
   window.matchMedia = null;
   const darkMode = useDarkMode(true);
