@@ -1,7 +1,8 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
-import Fade from 'react-reveal';
 import Social from './Social';
+
+import 'aos/dist/aos.css';
 
 const styles = {
   nameStyle: {
@@ -27,22 +28,20 @@ const styles = {
 
 function Home() {
   return (
-    <Fade>
-      <div style={styles.mainContainer}>
-        <h1 style={styles.nameStyle}>Peled Koren</h1>
-        <div style={{ flexDirection: 'row' }}>
-          <h2 style={styles.inlineChild}>I&apos;m&nbsp;a&nbsp;</h2>
-          <Typewriter
-            options={{
-              loop: true,
-              autoStart: true,
-              strings: ['react developer', 'full stack developer'],
-            }}
-          />
-        </div>
-        <Social />
+    <div style={styles.mainContainer} data-aos="fade">
+      <h1 style={styles.nameStyle}>Peled Koren</h1>
+      <div style={{ flexDirection: 'row' }}>
+        <h2 style={styles.inlineChild}>I&apos;m&nbsp;a&nbsp;</h2>
+        <Typewriter
+          options={{
+            loop: true,
+            autoStart: true,
+            strings: ['react developer', 'full stack developer'],
+          }}
+        />
       </div>
-    </Fade>
+      <Social />
+    </div>
   );
 }
 

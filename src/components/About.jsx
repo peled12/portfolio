@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Fade from 'react-reveal';
 import Header from './Header';
 
 import AOS from 'aos';
@@ -17,7 +16,7 @@ import '../css/about.css';
 const TEXT = [
   {
     title: 'About Me',
-    text: '<p>My name is Peled Koren, a 17-year-old junior full-stack developer with hands-on experience in building end-to-end web applications using ReactJS, Node.js, MongoDB and Socket.IO.</p><p>I am passionate about solving real-world problems through echnology and continuously learning to expand my skill set. Currently, I\'m also advancing my Next.js + TypeScript skills with MySQL and Prisma TailwindCSS to enhance my development workflow and build more scalable and efficient applications.</p><p>Beyond coding, I enjoy playing basketball and am a dedicated fan of the Milwaukee Bucks NBA team. Combining my love for basketball and web development, I created a Bucks fan page <a href="https://bucks-fan-page.vercel.app/">(link to it)</a>, where users can interact, create content, build their own fantasy rosters and much more.</p><p>This project not only allowed me to channel my passion but also significantly improved my skills in frontend design, API integration, and database management.</p>',
+    text: '<p>My name is Peled Koren, a 17-year-old junior full-stack developer with hands-on experience in building end-to-end web applications using ReactJS, Node.js and MongoDB.</p><p>I am passionate about solving real-world problems through technology and continuously learning to expand my skill set. I am currently working on a project to gain more experience, enhance my existing skills, and explore new technologies, helping me grow as a developer.</p><p>Beyond coding, I enjoy playing basketball and am a dedicated fan of the Milwaukee Bucks NBA team. Combining my love for basketball and web development, I created a Bucks fan page <a href="https://bucks-fan-page.vercel.app/">(link to it)</a>, where users can interact, create content, build their own fantasy rosters and much more.</p><p>This project not only allowed me to channel my passion but also significantly improved my skills in frontend design, API integration, and database management.</p>',
   },
   {
     title: 'What I Bring To The Table',
@@ -54,8 +53,10 @@ function About() {
 
   return (
     <>
-      <Header title="About Me" />
-      <div className="about-quick-scrolls">
+      <div data-aos="fade">
+        <Header title="About Me" />
+      </div>
+      <div className="about-quick-scrolls" data-aos="fade">
         <h3>Quick scroll</h3>
         <div className="links">
           {TEXT.map((obj, index) => (
@@ -66,22 +67,20 @@ function About() {
         </div>
       </div>
       <div className="section-content-container about-container">
-        <Fade>
-          <div className="text-container">
-            {TEXT.map((obj, index) => (
-              <AboutSection
-                key={index}
-                text={obj.text}
-                title={obj.title}
-                number={index}
-              />
-            ))}
-            <div className="expandor"></div>
-          </div>
-          <div className="img-container">
-            <img src={profileImg} alt="A picture of me" />
-          </div>
-        </Fade>
+        <div className="text-container">
+          {TEXT.map((obj, index) => (
+            <AboutSection
+              key={index}
+              text={obj.text}
+              title={obj.title}
+              number={index}
+            />
+          ))}
+          <div className="expandor"></div>
+        </div>
+        <div className="img-container" data-aos="fade">
+          <img src={profileImg} alt="A picture of me" />
+        </div>
       </div>
     </>
   );

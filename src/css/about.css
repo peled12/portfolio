@@ -110,8 +110,12 @@
   background-color: rgba(70, 70, 70, 0.5);
 }
 
-.dark-mode .about-container .about-text * {
+.dark-mode .about-container .about-text *:not(a) {
   color: white;
+}
+
+.about-container a {
+  transition: 0.3s ease;
 }
 
 .about-container .about-title {

@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import PropTypes from 'prop-types';
-import Fade from 'react-reveal';
 import { Container } from 'react-bootstrap';
 import Header from './Header';
+
+import 'aos/dist/aos.css';
 
 const styles = {
   iconStyle: {
@@ -70,31 +71,29 @@ function Skills() {
   return (
     <>
       <Header title="Skills" />
-      <Fade>
-        <div className="section-content-container">
-          <Container>
-            {renderSkillsIntro(
-              'I love to learn new things and experiment with new technologies.\nThese are some of the major languages, technologies, tools and platforms I have worked with:'
-            )}
-            {skills.map((rows) => (
-              <div key={rows.title}>
-                <br />
-                <h3>{rows.title}</h3>
-                {rows.items.map((item) => (
-                  <div key={item.title} style={{ display: 'inline-block' }}>
-                    <img
-                      style={styles.iconStyle}
-                      src={item.icon}
-                      alt={item.title}
-                    />
-                    <p>{item.title}</p>
-                  </div>
-                ))}
-              </div>
-            ))}
-          </Container>
-        </div>
-      </Fade>
+      <div className="section-content-container" data-aos="fade">
+        <Container>
+          {renderSkillsIntro(
+            'I love to learn new things and experiment with new technologies.\nThese are some of the major languages, technologies, tools and platforms I have worked with:'
+          )}
+          {skills.map((rows) => (
+            <div key={rows.title}>
+              <br />
+              <h3>{rows.title}</h3>
+              {rows.items.map((item) => (
+                <div key={item.title} style={{ display: 'inline-block' }}>
+                  <img
+                    style={styles.iconStyle}
+                    src={item.icon}
+                    alt={item.title}
+                  />
+                  <p>{item.title}</p>
+                </div>
+              ))}
+            </div>
+          ))}
+        </Container>
+      </div>
     </>
   );
 }

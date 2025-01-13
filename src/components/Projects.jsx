@@ -105,11 +105,11 @@ function Projects() {
   useEffect(() => {
     // initialize AOS
     AOS.init({
-      duration: 800,
+      duration: 600,
       offset: 40, // distance before triggering the animation
       easing: 'ease-in-out',
       once: false,
-      delay: 5,
+      delay: 0,
     });
   }, []);
 
@@ -133,7 +133,7 @@ function Projects() {
 
   return (
     <div className="work-page">
-      <h6 className="project-intro">
+      <h6 className="project-intro" data-aos="fade-in">
         Here are some projects I made to showcase my full-stack engineering
         skills (besides this one).
       </h6>
@@ -155,7 +155,7 @@ function Projects() {
           <ProjectSection project={JOB_LISTING} />
         </div>
       </div>
-      <div className="project-quick-scrolls">
+      <div className="project-quick-scrolls" data-aos="fade">
         <h3>Quick Scroll</h3>
         <div className="project-switcher">
           <span
