@@ -34,12 +34,12 @@ function MainApp() {
     <div className="MainApp">
       <NavBarWithRouter />
       <main className="main">
-        <Switch>
-          <Suspense fallback={<FallbackSpinner />}>
+        <Suspense fallback={<FallbackSpinner />}>
+          <Switch>
             <Route exact path="/" component={Home} />
             {sections.map((route, index) => {
               const SectionComponent = React.lazy(() =>
-                import('./components/' + route.component)
+                import(`./components/${route.component}`)
               );
               return (
                 <Route
@@ -51,8 +51,8 @@ function MainApp() {
                 />
               );
             })}
-          </Suspense>
-        </Switch>
+          </Switch>
+        </Suspense>
       </main>
     </div>
   );
