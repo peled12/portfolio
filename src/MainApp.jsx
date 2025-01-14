@@ -37,13 +37,13 @@ function MainApp() {
         <Switch>
           <Suspense fallback={<FallbackSpinner />}>
             <Route exact path="/" component={Home} />
-            {sections.map((route) => {
+            {sections.map((route, index) => {
               const SectionComponent = React.lazy(() =>
                 import('./components/' + route.component)
               );
               return (
                 <Route
-                  key={route.headerTitle}
+                  key={index}
                   path={route.path}
                   component={() => (
                     <SectionComponent header={route.headerTitle} />

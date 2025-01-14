@@ -5,8 +5,9 @@ import AppContext from '../AppContext';
 
 function ThemeToggler(props) {
   const { onClick } = props;
-  const handleOnChange = (darkMode) => {
-    darkMode.toggle();
+
+  const handleOnChange = (changeTheme) => {
+    changeTheme();
     onClick();
   };
 
@@ -16,8 +17,8 @@ function ThemeToggler(props) {
         {(values) => (
           <div style={{ marginBottom: 8 }}>
             <DarkModeToggle
-              onChange={() => handleOnChange(values.darkMode)}
-              checked={values.darkMode.value}
+              onChange={() => handleOnChange(values.changeTheme)}
+              checked={values.darkMode}
               size={50}
             />
           </div>

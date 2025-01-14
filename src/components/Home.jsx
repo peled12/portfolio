@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Typewriter from 'typewriter-effect';
 import Social from './Social';
 
+import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const styles = {
@@ -27,6 +28,14 @@ const styles = {
 */
 
 function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+    AOS.refresh();
+  }, []);
+
   return (
     <div style={styles.mainContainer} data-aos="fade">
       <h1 style={styles.nameStyle}>Peled Koren</h1>

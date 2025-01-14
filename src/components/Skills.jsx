@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import PropTypes from 'prop-types';
 import { Container } from 'react-bootstrap';
 import Header from './Header';
 
+import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const styles = {
@@ -64,7 +65,19 @@ const SKILLS = [
 const SKILLS_INTRO =
   'I love to learn new things and experiment with new technologies.\nThese are some of the major languages, technologies, tools and platforms I have worked with:';
 
+/*
+  TODO: make sure to include more skills
+*/
+
 function Skills() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+    AOS.refresh();
+  }, []);
+
   const renderSkillsIntro = (intro) => (
     <h4 style={styles.introTextContainer}>
       <ReactMarkdown children={intro} />
