@@ -33,7 +33,6 @@ function Home() {
       duration: 1000,
       once: true,
     });
-    AOS.refresh();
   }, []);
 
   return (
