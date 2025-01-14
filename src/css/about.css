@@ -116,9 +116,6 @@
 
 .about-container a {
   transition: 0.3s ease;
-  color: initial;
-  text-decoration: initial;
-  cursor: initial;
 }
 
 .about-container .about-title {
