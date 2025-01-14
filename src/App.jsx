@@ -12,7 +12,7 @@ function App() {
   const [darkMode, setdarkMode] = useState(() => {
     // check is dark mode is active
     const stored = localStorage.getItem('dark-mode');
-    return stored ? true : false;
+    return !!stored;
   });
 
   function changeTheme() {
