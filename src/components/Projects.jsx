@@ -139,7 +139,12 @@ function Projects() {
       </h6>
       <div className="project-container bucks-page">
         <div className="BucksFanPage-header-container" data-aos="fade-up">
-          <Header title="Bucks Fan Page" />
+          <div>
+            <Header
+              title="Bucks Fan Page"
+              demoURL="https://bucks-fan-page.vercel.app"
+            />
+          </div>
           <p className="first-msg">
             Let's go through the features of the fan page I've made.
           </p>
@@ -148,9 +153,13 @@ function Projects() {
       </div>
       <div className="project-container job-listing">
         <div className="JobListing-header-container" data-aos="fade-up">
-          <Header title="Job Listing" />
+          <Header
+            title="Job Listing"
+            demoURL="https://job-listing-six-theta.vercel.app/pages/jobs"
+          />
           <p className="first-msg">
-            And here are the features of the Job Listing page.
+            A simpler project, used to showcase my versatilty as a web
+            developer.
           </p>
           <ProjectSection project={JOB_LISTING} />
         </div>

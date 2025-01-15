@@ -3,8 +3,25 @@ import PropTypes from 'prop-types';
 import '../App.css';
 
 function Header(props) {
-  const { title } = props;
-  return <div className="header">{title}</div>;
+  const { title, demoURL } = props;
+
+  return (
+    <div className="header">
+      {title}
+      {demoURL ? (
+        <span style={{ fontSize: 'Initial' }}>
+          {' '}
+          (
+          <a target="_blank" href={demoURL}>
+            demo
+          </a>
+          )
+        </span>
+      ) : (
+        ''
+      )}
+    </div>
+  );
 }
 
 Header.propTypes = {
