@@ -12,7 +12,7 @@ function Header(props) {
         <span style={{ fontSize: 'Initial' }}>
           {' '}
           (
-          <a target="_blank" href={demoURL}>
+          <a target="_blank" href={demoURL} rel="noopener noreferrer">
             demo
           </a>
           )
