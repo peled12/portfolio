@@ -33,7 +33,8 @@ const TEXT = [
 ];
 
 /*
- TODO: adapt the text
+  TODO: adapt the text
+  TODO: put a cool picture of myself here
 */
 
 function About() {
