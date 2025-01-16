@@ -16,7 +16,7 @@ const TEXT = [
 ];
 
 /*
-  TODO: add and improve the text here
+  TODO: add and improve the text if needed
   TODO: add scroll animation if needed
   TODO: update the text when releavant
 */
@@ -35,11 +35,11 @@ function Education() {
       <div data-aos="fade">
         <Header title="Education" />
       </div>
-      <h5>
+      <h4 className="education-intro" data-aos="fade">
         Here is the educational journey I have undertaken as a high school
         student.
-      </h5>
-      <div className="education-container">
+      </h4>
+      <div className="education-container" data-aos="fade">
         {TEXT.map((text, index) => (
           <p key={index}>{text}</p>
         ))}

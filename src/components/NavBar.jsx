@@ -38,9 +38,9 @@ const InternalNavLink = styled(NavLink)`
 const sections = [
   { title: 'Home', href: '/' },
   { title: 'About', href: '/about' },
+  { title: 'Work', href: '/projects' },
   { title: 'Skills', href: '/skills' },
   { title: 'Education', href: '/education' },
-  { title: 'Work', href: '/projects' },
   { title: 'Resume', href: '/' }, // TODO: add a real resume url
 ];
 

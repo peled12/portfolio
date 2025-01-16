@@ -4,6 +4,11 @@
   width: 80vw;
 }
 
+.education-intro {
+  margin-bottom: 30px;
+}
+
 .education-container p {
-  text-align: start;
+  font-size: 18px;
+  margin-bottom: 0.5rem;
 }
