@@ -32,7 +32,7 @@ import NODEJS_IMG from '../images/skills/nodejs.png';
 import GIT_IMG from '../images/skills/git.png';
 
 /*
-  TODO: add typescirpt and next js after learning
+  TODO: add nextJS
 */
 
 const SKILLS = [
