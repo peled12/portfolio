@@ -17,7 +17,6 @@ const TEXT = [
 
 /*
   TODO: add and improve the text if needed
-  TODO: add scroll animation if needed
   TODO: update the text when releavant
 */
 

@@ -3,17 +3,17 @@ import PropTypes from 'prop-types';
 import '../App.css';
 
 function Header(props) {
-  const { title, demoURL } = props;
+  const { title, url } = props;
 
   return (
     <div className="header">
       {title}
-      {demoURL ? (
+      {url ? (
         <span style={{ fontSize: 'Initial' }}>
           {' '}
           (
-          <a target="_blank" href={demoURL} rel="noopener noreferrer">
-            demo
+          <a target="_blank" href={url} rel="noopener noreferrer">
+            link
           </a>
           )
         </span>

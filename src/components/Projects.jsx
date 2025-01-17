@@ -135,14 +135,14 @@ function Projects() {
     <div className="work-page">
       <h6 className="project-intro" data-aos="fade-in">
         Here are some projects I made to showcase my full-stack engineering
-        skills (besides this one).
+        skills.
       </h6>
       <div className="project-container bucks-page">
         <div className="BucksFanPage-header-container" data-aos="fade-up">
           <div>
             <Header
               title="Bucks Fan Page"
-              demoURL="https://bucks-fan-page.vercel.app"
+              url="https://bucks-fan-page.vercel.app"
             />
           </div>
           <p className="first-msg">
@@ -155,7 +155,7 @@ function Projects() {
         <div className="JobListing-header-container" data-aos="fade-up">
           <Header
             title="Job Listing"
-            demoURL="https://job-listing-six-theta.vercel.app/pages/jobs"
+            url="https://job-listing-six-theta.vercel.app/pages/jobs"
           />
           <p className="first-msg">
             A simpler project, used to showcase my versatilty as a web
