@@ -12,24 +12,11 @@ import ProjectSection from './ProjectSection';
 
 const BUCKS_FAN_PAGE = [
   {
-    title: 'Real Time Chatting',
+    title: 'Fan Posts & Interactions',
     text: [
-      'You can feel free to chat with your friends on the website, or just DM or reply to users.',
-      "Using socket.io, i've managed to apply real-time chatting, sousers can actively message each other about a subject they would like to discuss. weather its about ticket selling, basketball, or anything else",
-    ],
-  },
-  {
-    title: 'Fan Posting',
-    text: [
-      'Users can post their opinions on the current state of the Milwaukee Bucks via articles they make (fanposts) or trade ideas.',
-      "Everyone can scroll through the fanposts or trade ideas, and explore others' prespective.",
-    ],
-  },
-  {
-    title: 'Comments & post interactions',
-    text: [
-      'On every post you make, users can express their thoughts by interacting with it. Interacting includes liking or disliking posts, commenting and also replying.',
-      'interacting with posts or creating ones can create discussions between users on the website which can help sharing their basketball opinions.',
+      'Fans can share their opinions on the Milwaukee Bucks by creating articles (fanposts) or proposing trade ideas, fostering a space for expression and discussion.',
+      'Everyone can explore fanposts and trade ideas to discover new perspectives and join the conversation.',
+      'Users can interact with posts by liking, disliking, commenting, or replying, creating dynamic discussions and connecting Bucks fans',
     ],
   },
   {
@@ -55,24 +42,17 @@ const BUCKS_FAN_PAGE = [
     ],
   },
   {
-    title: 'Profile Dashboard',
+    title: 'Real Time Chatting',
     text: [
-      'This website has a profile dashboard section, where users can interact with their profile.',
-      "They can do things like changing their profile picture, changing their user credentials, viewing / interacting with their posts, changing their roster's visibilty state and more. Things like that could make the user's time interacting with the website smoother and boost the user experience.",
-    ],
-  },
-  {
-    title: 'Ticket Market',
-    text: [
-      "People that might have tickets for a game that they won't go to, may post it on the site and look for potential buyers.",
-      'This can make the site more useful for people, as they might find tickets for a better price.',
+      'You can feel free to chat with your friends on the website, or just DM or reply to users.',
+      "Using socket.io, i've managed to apply real-time chatting, sousers can actively message each other about a subject they would like to discuss. weather its about ticket selling, basketball, or anything else",
     ],
   },
   {
     title: 'More',
     text: [
-      "This app has a variety of features that are a part of the things I've included like profile picture displaytion, pregame polls and much more.",
-      'The best way to experience those features is to try it yourself! so feel free to click the link and try the demo!',
+      "This app has a variety of features that I haven't included, like a user dashboard or ticket market. It also has some features that are apart of others that i mentioned like profile picture displaytion or game polls.",
+      'Feel free to click the link at the beginning of the section to visit the website and explore all the features!',
     ],
   },
 ];
