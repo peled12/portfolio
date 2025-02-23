@@ -11,6 +11,11 @@ function Contact() {
 
   const history = useHistory();
 
+  function isValidEmail(email) {
+    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return regex.test(email);
+  }
+
   async function handleSubmit(e) {
     e.preventDefault();
 
@@ -18,6 +23,13 @@ function Contact() {
 
     const formData = new FormData(e.target);
     const jsonObject = Object.fromEntries(formData.entries());
+
+    // validate email format
+    if (!isValidEmail(jsonObject.email)) {
+      alert('Please enter a valid email address.');
+      setloading(false);
+      return;
+    }
 
     try {
       // start the animation
