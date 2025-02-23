@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-// import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import '../css/contact.css';
 
 import Header from './Header';
-// import sleep from './utils/sleep';
+import sleep from './utils/sleep';
 
 function Contact() {
   const [loading, setloading] = useState(false);
 
-  // const history = useHistory();
+  const history = useHistory();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -21,46 +21,46 @@ function Contact() {
 
     console.log(jsonObject);
 
-    // try {
-    //   // start the animation
-    //   const loader = document.querySelector('.contact-loader');
-    //   loader.style.display = 'block';
+    try {
+      // start the animation
+      const loader = document.querySelector('.contact-loader');
+      loader.style.display = 'block';
 
-    //   // send the request to Formspree API
-    //   const response = await fetch('https://formspree.io/f/mnnjyjwb', {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify({
-    //       _subject: 'New Email From Portfolio Website',
-    //       message: `Email: ${jsonObject.email}\nMessage: ${jsonObject.message}`,
-    //     }),
-    //   });
+      // send the request to Formspree API
+      const response = await fetch('https://formspree.io/f/mnnjyjwb', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          _subject: 'New Email From Portfolio Website',
+          message: `Email: ${jsonObject.email}\nMessage: ${jsonObject.message}`,
+        }),
+      });
 
-    //   // handle response
-    //   await sleep(150); // add a slight delay for coolness
+      // handle response
+      await sleep(150); // add a slight delay for coolness
 
-    //   // set the correct color based on the response
-    //   if (response.ok) {
-    //     loader.classList.add('green');
+      // set the correct color based on the response
+      if (response.ok) {
+        loader.classList.add('green');
 
-    //     alert('Email sent successfully!');
+        alert('Email sent successfully!');
 
-    //     history.push('/'); // redirect to the home page
-    //   } else {
-    //     loader.classList.add('red');
+        history.push('/'); // redirect to the home page
+      } else {
+        loader.classList.add('red');
 
-    //     console.log(response);
-    //   }
+        console.log(response);
+      }
 
-    //   await sleep(150); // add a slight delay for coolness
+      await sleep(150); // add a slight delay for coolness
 
-    //   loader.style.display = 'none'; // hide the loader
-    //   loader.classList.remove('green', 'red'); // remove colors classlists
-    // } catch (error) {
-    //   alert('Something went wrong. Please try again.');
-    // } finally {
-    //   setloading(false); // Hide loading indicator once the request is done
-    // }
+      loader.style.display = 'none'; // hide the loader
+      loader.classList.remove('green', 'red'); // remove colors classlists
+    } catch (error) {
+      alert('Something went wrong. Please try again.');
+    } finally {
+      setloading(false); // Hide loading indicator once the request is done
+    }
   }
 
   return (
