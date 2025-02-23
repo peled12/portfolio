@@ -19,8 +19,6 @@ function Contact() {
     const formData = new FormData(e.target);
     const jsonObject = Object.fromEntries(formData.entries());
 
-    console.log(jsonObject);
-
     try {
       // start the animation
       const loader = document.querySelector('.contact-loader');
@@ -32,7 +30,7 @@ function Contact() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           _subject: 'New Email From Portfolio Website',
-          message: `Email: ${jsonObject.email}\nMessage: ${jsonObject.message}`,
+          message: `Email: ${jsonObject.email}\nMessage: ${jsonObject.text}`,
         }),
       });
 
