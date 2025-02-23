@@ -41,6 +41,7 @@ const sections = [
   { title: 'Work', href: '/projects' },
   { title: 'Skills', href: '/skills' },
   { title: 'Education', href: '/education' },
+  { title: 'Contact', href: '/contact' },
   { title: 'Resume', href: '/' }, // TODO: add a real resume url
 ];
 

@@ -22,7 +22,7 @@ const styles = {
 import JS_IMG from '../images/skills/js.png';
 import TS_IMG from '../images/skills/typescript.png';
 import MONGO_DB_IMG from '../images/skills/mongo-db.png';
-import MY_SQL_IMG from '../images/skills/mysql.png';
+import POSTGRES from '../images/skills/postgres.png';
 import JAVA_IMG from '../images/skills/java.png';
 import C_IMG from '../images/skills/c.png';
 import SOCKET_IO_IMG from '../images/skills/socket-io.png';
@@ -32,7 +32,7 @@ import NODEJS_IMG from '../images/skills/nodejs.png';
 import GIT_IMG from '../images/skills/git.png';
 
 /*
-  TODO: add nextJS
+  TODO: add nextJS, expressJS, Cypress and Vercel
 */
 
 const SKILLS = [
@@ -42,7 +42,7 @@ const SKILLS = [
       { icon: JS_IMG, title: 'JavaScript' },
       { icon: TS_IMG, title: 'TypeScript' },
       { icon: MONGO_DB_IMG, title: 'Mongo DB' },
-      { icon: MY_SQL_IMG, title: 'MySQL' },
+      { icon: POSTGRES, title: 'PostgresSQL' },
       { icon: JAVA_IMG, title: 'Java' },
       { icon: C_IMG, title: 'C' },
     ],

@@ -19,13 +19,14 @@ const sections = [
     path: '/education',
   },
   {
-    component: 'MyProject',
-    path: '/myProject',
-  },
-  {
     component: 'Projects',
     headerTitle: 'Projects',
     path: '/projects',
+  },
+  {
+    component: 'Contact',
+    headerTitle: 'Contact',
+    path: '/contact',
   },
 ];
 

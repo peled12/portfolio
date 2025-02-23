@@ -1,0 +1,92 @@
+.contact-page {
+  max-width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 80%;
+}
+
+.contact-form label {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.contact-form label p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: start;
+  min-width: 80px;
+}
+
+.contact-form label textarea {
+  width: 100%;
+  padding: 5px;
+  height: 80px;
+}
+.contact-form label input {
+  width: 220px;
+}
+
+.contact-form .second-row-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-form .submit-btn {
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: 0.4s ease;
+}
+
+.contact-form .submit-btn:hover {
+  background-color: #c6c6c6;
+}
+
+.dark-mode .contact-form .submit-btn:hover {
+  background-color: #343434;
+}
+
+.contact-loader {
+  margin-top: 50px;
+  width: 60px;
+  aspect-ratio: 4;
+  --_g: no-repeat radial-gradient(circle closest-side, #000 90%, #0000);
+  background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
+  background-size: calc(100% / 3) 100%;
+  animation: l7 1s infinite linear;
+  display: none;
+}
+
+.dark-mode .contact-loader {
+  --_g: no-repeat radial-gradient(circle closest-side, #ffffff 90%, #0000);
+}
+
+.contact-loader.green {
+  --_g: no-repeat radial-gradient(circle closest-side, #00ff00 90%, #0000);
+}
+
+.contact-loader.red {
+  --_g: no-repeat radial-gradient(circle closest-side, #ff0000 90%, #0000);
+}
+
+@keyframes l7 {
+  33% {
+    background-size: calc(100% / 3) 0%, calc(100% / 3) 100%, calc(100% / 3) 100%;
+  }
+  50% {
+    background-size: calc(100% / 3) 100%, calc(100% / 3) 0%, calc(100% / 3) 100%;
+  }
+  66% {
+    background-size: calc(100% / 3) 100%, calc(100% / 3) 100%, calc(100% / 3) 0%;
+  }
+}

@@ -3,9 +3,7 @@ import DarkModeToggle from 'react-dark-mode-toggle';
 import PropTypes from 'prop-types';
 import AppContext from '../AppContext';
 
-function ThemeToggler(props) {
-  const { onClick } = props;
-
+function ThemeToggler({ onClick = () => {} }) {
   const handleOnChange = (changeTheme) => {
     changeTheme();
     onClick();
@@ -29,10 +27,7 @@ function ThemeToggler(props) {
 }
 
 ThemeToggler.propTypes = {
-  onClick: PropTypes.func,
-};
-ThemeToggler.defaultProps = {
-  onClick: () => {},
+  onClick: PropTypes.func.isRequired,
 };
 
 export default ThemeToggler;
