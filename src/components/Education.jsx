@@ -18,6 +18,7 @@ const TEXT = [
 /*
   TODO: add and improve the text if needed
   TODO: update the text when releavant
+  TODO: include my assembler project
 */
 
 function Education() {

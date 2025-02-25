@@ -23,16 +23,17 @@ import JS_IMG from '../images/skills/js.png';
 import TS_IMG from '../images/skills/typescript.png';
 import MONGO_DB_IMG from '../images/skills/mongo-db.png';
 import POSTGRES from '../images/skills/postgres.png';
-import JAVA_IMG from '../images/skills/java.png';
-import C_IMG from '../images/skills/c.png';
 import SOCKET_IO_IMG from '../images/skills/socket-io.png';
 import REACT_IMG from '../images/skills/react.png';
 import CSS_IMG from '../images/skills/css.png';
 import NODEJS_IMG from '../images/skills/nodejs.png';
+import EXPRESSJS_IMG from '../images/skills/expressjs.png';
+import NEXTJS_IMG from '../images/skills/nextjs.png';
 import GIT_IMG from '../images/skills/git.png';
 
 /*
-  TODO: add nextJS, expressJS, Cypress and Vercel
+  TODO: fix the next and express logos
+  TODO: Cypress and Vercel (also nestJS after learning it)
 */
 
 const SKILLS = [
@@ -43,15 +44,15 @@ const SKILLS = [
       { icon: TS_IMG, title: 'TypeScript' },
       { icon: MONGO_DB_IMG, title: 'Mongo DB' },
       { icon: POSTGRES, title: 'PostgresSQL' },
-      { icon: JAVA_IMG, title: 'Java' },
-      { icon: C_IMG, title: 'C' },
     ],
   },
   {
     title: 'Frameworks & Technologies',
     items: [
       { icon: REACT_IMG, title: 'React' },
-      { icon: NODEJS_IMG, title: 'Nodejs' },
+      { icon: NODEJS_IMG, title: 'NodeJS' },
+      { icon: NEXTJS_IMG, title: 'NextJS' },
+      { icon: EXPRESSJS_IMG, title: 'ExpressJS' },
       { icon: CSS_IMG, title: 'CSS' },
       { icon: SOCKET_IO_IMG, title: 'SocketIO' },
     ],
