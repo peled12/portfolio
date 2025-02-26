@@ -32,7 +32,6 @@ import NEXTJS_IMG from '../images/skills/nextjs.png';
 import GIT_IMG from '../images/skills/git.png';
 
 /*
-  TODO: fix the next and express logos
   TODO: Cypress and Vercel (also nestJS after learning it)
 */
 
