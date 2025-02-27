@@ -30,9 +30,11 @@ import NODEJS_IMG from '../images/skills/nodejs.png';
 import EXPRESSJS_IMG from '../images/skills/expressjs.png';
 import NEXTJS_IMG from '../images/skills/nextjs.png';
 import GIT_IMG from '../images/skills/git.png';
+import VERCEL_IMG from '../images/skills/vercel.png';
+import CYPRESS_IMG from '../images/skills/cypress.png';
 
 /*
-  TODO: Cypress and Vercel (also nestJS after learning it)
+  TODO: add nestJS after learning and using it
 */
 
 const SKILLS = [
@@ -58,7 +60,11 @@ const SKILLS = [
   },
   {
     title: 'Tools & Platforms',
-    items: [{ icon: GIT_IMG, title: 'Git' }],
+    items: [
+      { icon: VERCEL_IMG, title: 'Vercel' },
+      { icon: GIT_IMG, title: 'Git' },
+      { icon: CYPRESS_IMG, title: 'Cypress' },
+    ],
   },
 ];
 
