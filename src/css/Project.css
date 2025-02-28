@@ -1,13 +1,10 @@
-.project-container {
-  width: 95vw;
-  margin-top: 5px;
-}
-
 .project-container .project-text-container {
   display: flex;
   flex-direction: column;
-  width: 72vw;
+  width: 70vw;
   margin-bottom: 20px;
+  position: relative;
+  left: 2vw;
 }
 
 .project-container .project-row {
@@ -66,28 +63,30 @@
 
 .project-intro {
   width: 30vw;
-  margin-top: 30px;
+  margin-top: 10px;
+  margin-left: 30px;
 }
 
 .project-quick-scrolls {
-  position: fixed;
-  right: 1vw;
-  top: 100px;
+  position: sticky;
+  top: 50px;
   width: 22vw;
+  max-height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .project-quick-scrolls > h3 {
-  border-bottom: 1px solid black;
+  border-bottom: 5px solid #e6ac27;
   transition: 0.3s ease;
   margin-bottom: 10px;
   white-space: nowrap;
+  font-family: 'magic night';
 }
 
 .project-quick-scrolls > .project-switcher {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   font-size: 21px;
 }
 
@@ -131,28 +130,22 @@
   text-overflow: ellipsis;
   width: 100%;
   margin: 0;
-}
-
-.dark-mode .project-quick-scrolls > h3 {
-  border-bottom: 1px solid white;
+  font-size: 16px;
 }
 
 .project-quick-scrolls p {
   cursor: pointer;
-  color: #0000ee;
   transition: 0.3s ease;
   width: max-content;
 }
 
-.dark-mode .project-quick-scrolls p {
-  color: #0073ee;
+.project-quick-scrolls > .links > div > p:hover {
+  font-size: 18px;
+  font-weight: 600;
 }
 
-.project-quick-scrolls p:hover {
-  color: #0056b3;
-  text-decoration: underline;
-}
-
-.dark-mode .project-quick-scrolls p:hover {
-  color: #0077b3;
+.project-container .project-first-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }

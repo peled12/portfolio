@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 
 import AboutSection from './AboutSection';
 
-import profileImg from '../images//about/profile.png';
+import profileImg from '../images/about/my_img.jpg';
 
 import quickScroll from './utils/quickScroll';
 
@@ -20,10 +20,6 @@ const TEXT = [
   {
     title: 'What I Bring To The Table',
     text: "<p><b>Problem-Solving Mindset</b>: I thrive on tackling challenges, whether it's debugging a tricky issue or optimizing a complex system.</p><p><b>Self-Motivation</b>: At just 17, I independently built a full-stack project, demonstrating my ability to manage a project from start to finish.</p><p><b>Attention to Detail</b>: From crafting intuitive user interfaces to writing efficient backend code, I focus on delivering high-quality results.</p><p><b>Collaboration Skills</b>: While I often work independently, I also value teamwork and have collaborated with others on side projects and open-source contributions.</p>",
-  },
-  {
-    title: 'Key Technical Skills',
-    text: '<p><b>Frontend</b>: ReactJS, HTML, CSS, JavaScript.</p><p><b>Backend</b>: Node.js, Express.</p><p><b>Database</b>: MongoDB.</p><p><b>Version Control</b>: Git/GitHub.</p><p><b>Deployment</b>: Netlify, Render.</p><p><b>Testing & Optimization</b>: Basic knowledge of Cypress and debugging techniques.</p>',
   },
   {
     title: 'Why Choose Me?',

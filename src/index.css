@@ -5,10 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-body.dark-mode {
-  background: rgb(25, 25, 25) !important;
+  background-color: #ece9e4;
+  overflow-x: hidden;
 }
 
 code {
@@ -39,4 +37,21 @@ button {
 .dark-mode textarea {
   border: 1px solid #2d2d2d;
   border-bottom: 1px solid #484848;
+}
+
+h2,
+h1 {
+  display: inline-block;
+  position: relative;
+}
+
+h2::before,
+h1::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  max-width: 30%;
+  border-bottom: 2px solid #e6ac27;
 }

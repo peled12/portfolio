@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import Typewriter from 'typewriter-effect';
 import Social from './Social';
 
+import '../css/home.css';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -36,7 +38,11 @@ function Home() {
   }, []);
 
   return (
-    <div style={styles.mainContainer} data-aos="fade">
+    <div
+      style={styles.mainContainer}
+      data-aos="fade"
+      className="home-container"
+    >
       <h1 style={styles.nameStyle}>Peled Koren</h1>
       <div style={{ flexDirection: 'row' }}>
         <h2 style={styles.inlineChild}>I&apos;m&nbsp;a&nbsp;</h2>

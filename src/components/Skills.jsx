@@ -16,6 +16,7 @@ const styles = {
   },
   introTextContainer: {
     whiteSpace: 'pre-wrap',
+    fontFamily: 'poppins Regular ',
   },
 };
 
@@ -100,7 +101,7 @@ function Skills() {
           {SKILLS.map((rows) => (
             <div key={rows.title}>
               <br />
-              <h3>{rows.title}</h3>
+              <h3 style={{ fontFamily: 'poppins thin' }}>{rows.title}</h3>
               {rows.items.map((item) => (
                 <div key={item.title} style={{ display: 'inline-block' }}>
                   <img

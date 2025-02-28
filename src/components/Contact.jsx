@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import '../css/contact.css';
 
@@ -10,6 +13,14 @@ function Contact() {
   const [loading, setloading] = useState(false);
 
   const history = useHistory();
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+    AOS.refresh();
+  }, []);
 
   function isValidEmail(email) {
     const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -74,7 +85,7 @@ function Contact() {
   }
 
   return (
-    <div className="contact-page">
+    <div className="contact-page" data-aos="fade">
       <Header title="Contact Me"></Header>
       <h5>
         I am currently available for hire and open to new opportunities,

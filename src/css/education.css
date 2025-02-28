@@ -1,9 +1,3 @@
-.education-container {
-  display: flex;
-  flex-direction: column;
-  width: 80vw;
-}
-
 .education-intro {
   margin-bottom: 30px;
 }

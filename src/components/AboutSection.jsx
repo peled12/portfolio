@@ -3,7 +3,9 @@ import React from 'react';
 function AboutSection({ title, text, number }) {
   return (
     <div className={'about-text number' + number}>
-      <h2 className="about-title">{title}</h2>
+      <div className="title-container">
+        <h2 className="about-title">{title}</h2>
+      </div>
       <div
         className="about-reveal"
         dangerouslySetInnerHTML={{

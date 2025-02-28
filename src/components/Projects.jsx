@@ -129,7 +129,57 @@ function Projects() {
             Let's go through the features of the fan page I've made.
           </p>
         </div>
-        <ProjectSection project={BUCKS_FAN_PAGE} />
+        <div className="project-first-container">
+          <ProjectSection project={BUCKS_FAN_PAGE} />
+          <div className="project-quick-scrolls" data-aos="fade">
+            <h3>Quick Scroll</h3>
+            <div className="project-switcher">
+              <span
+                onClick={() => setisBucksPageActive(true)}
+                className={!isBucksPageActive ? 'not-active' : ''}
+              >
+                Bucks Fan Page
+              </span>{' '}
+              |{' '}
+              <span
+                onClick={() => setisBucksPageActive(false)}
+                className={isBucksPageActive ? 'not-active' : ''}
+              >
+                Job Listing
+              </span>
+            </div>
+            <div className="links">
+              {isBucksPageActive ? (
+                <>
+                  <p onClick={handleScrollToBucksProject}>Bucks Fan Page</p>
+                  {BUCKS_FAN_PAGE.map((obj, index) => (
+                    <div key={index}>
+                      <p onClick={() => bucksPageQuickScroll(index)}>
+                        {obj.title}
+                      </p>
+                    </div>
+                  ))}
+                </>
+              ) : (
+                <>
+                  <p
+                    onClick={handleScrollToJobListing}
+                    style={{ fontSize: '20px', fontWeight: 'bold' }}
+                  >
+                    Job Listing
+                  </p>
+                  {JOB_LISTING.map((obj, index) => (
+                    <div key={index}>
+                      <p onClick={() => jobListingQuickScroll(index)}>
+                        {obj.title}
+                      </p>
+                    </div>
+                  ))}
+                </>
+              )}
+            </div>
+          </div>
+        </div>
       </div>
       <div className="project-container job-listing">
         <div className="JobListing-header-container" data-aos="fade-up">
@@ -142,57 +192,6 @@ function Projects() {
             developer.
           </p>
           <ProjectSection project={JOB_LISTING} />
-        </div>
-      </div>
-      <div className="project-quick-scrolls" data-aos="fade">
-        <h3>Quick Scroll</h3>
-        <div className="project-switcher">
-          <span
-            onClick={() => setisBucksPageActive(true)}
-            className={!isBucksPageActive ? 'not-active' : ''}
-          >
-            Bucks Fan Page
-          </span>{' '}
-          |{' '}
-          <span
-            onClick={() => setisBucksPageActive(false)}
-            className={isBucksPageActive ? 'not-active' : ''}
-          >
-            Job Listing
-          </span>
-        </div>
-        <div className="links">
-          {isBucksPageActive ? (
-            <>
-              <p
-                onClick={handleScrollToBucksProject}
-                style={{ fontSize: '20px', fontWeight: 'bold' }}
-              >
-                Bucks Fan Page
-              </p>
-              {BUCKS_FAN_PAGE.map((obj, index) => (
-                <div key={index}>
-                  <p onClick={() => bucksPageQuickScroll(index)}>{obj.title}</p>
-                </div>
-              ))}
-            </>
-          ) : (
-            <>
-              <p
-                onClick={handleScrollToJobListing}
-                style={{ fontSize: '20px', fontWeight: 'bold' }}
-              >
-                Job Listing
-              </p>
-              {JOB_LISTING.map((obj, index) => (
-                <div key={index}>
-                  <p onClick={() => jobListingQuickScroll(index)}>
-                    {obj.title}
-                  </p>
-                </div>
-              ))}
-            </>
-          )}
         </div>
       </div>
     </div>

@@ -1,0 +1,9 @@
+.home-container h2::before,
+.home-container h1::before {
+  content: none;
+}
+
+.home-container {
+  width: 100vw !important;
+  height: 100vh !important;
+}
