@@ -3,7 +3,45 @@
   content: none;
 }
 
+nav {
+  background-color: transparent !important;
+}
+
 .home-container {
   width: 100vw !important;
   height: 100vh !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-container > .home-content {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-container > .home-content .social {
+  position: relative;
+  margin-top: 40px;
+}
+
+.home-container > .home-content h1 {
+  font-size: 5em;
+  color: rgb(255, 255, 118);
+}
+
+.home-container > .home-content h2 {
+  color: rgb(255, 255, 216);
+}
+
+.home-container > .home-content .Typewriter {
+  color: rgb(247, 255, 163);
 }

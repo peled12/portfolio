@@ -7,22 +7,6 @@ import '../css/home.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const styles = {
-  nameStyle: {
-    fontSize: '5em',
-  },
-  inlineChild: {
-    display: 'inline-block',
-  },
-  mainContainer: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-};
-
 /*
   TODO: make my repositories public (decide if also the bucks fan page)
   TODO: change the logo of this website (can use ai to generate the new one)
@@ -38,23 +22,21 @@ function Home() {
   }, []);
 
   return (
-    <div
-      style={styles.mainContainer}
-      data-aos="fade"
-      className="home-container"
-    >
-      <h1 style={styles.nameStyle}>Peled Koren</h1>
-      <div style={{ flexDirection: 'row' }}>
-        <h2 style={styles.inlineChild}>I&apos;m&nbsp;a&nbsp;</h2>
-        <Typewriter
-          options={{
-            loop: true,
-            autoStart: true,
-            strings: ['react developer', 'full stack developer'],
-          }}
-        />
+    <div className="home-container" data-aos="fade">
+      <div className="home-content">
+        <h1>Peled Koren</h1>
+        <div style={{ flexDirection: 'row' }}>
+          <h2>I&apos;m&nbsp;a&nbsp;</h2>
+          <Typewriter
+            options={{
+              loop: true,
+              autoStart: true,
+              strings: ['full stack developer', 'react developer'],
+            }}
+          />
+        </div>
+        <Social />
       </div>
-      <Social />
     </div>
   );
 }

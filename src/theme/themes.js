@@ -7,9 +7,7 @@ export const lightTheme = {
     linkHoverColor: '#fefefe',
     linkActiveColor: '#fefefe',
   },
-  bsPrimaryVariant: 'light',
-  bsSecondaryVariant: 'dark',
-  socialIconBgColor: '#121212',
+  socialIconBgColor: '#ffffed',
 };
 
 export const darkTheme = {
@@ -21,7 +19,5 @@ export const darkTheme = {
     linkHoverColor: '#fefefe',
     linkActiveColor: '#fefefe',
   },
-  bsPrimaryVariant: 'dark',
-  bsSecondaryVariant: 'light',
-  socialIconBgColor: '#fefefe',
+  socialIconBgColor: '#ffffed',
 };

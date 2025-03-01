@@ -59,7 +59,7 @@ const NavBar = () => {
     <Navbar
       fixed="top"
       expand="md"
-      bg="dark"
+      bg={window.location.pathname === '/' ? 'transparent' : 'dark'}
       variant="dark"
       className="navbar-custom"
       expanded={expanded}

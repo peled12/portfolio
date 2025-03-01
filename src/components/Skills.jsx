@@ -16,7 +16,7 @@ const styles = {
   },
   introTextContainer: {
     whiteSpace: 'pre-wrap',
-    fontFamily: 'poppins Regular ',
+    fontFamily: 'poppins Regular',
   },
 };
 

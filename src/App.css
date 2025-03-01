@@ -110,11 +110,6 @@ section.timeline-card-content div.card-description > p {
   font-weight: 500;
 }
 
-.social {
-  position: relative;
-  margin-top: 60px;
-}
-
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .navbar__link {
     margin-left: 0.4em;
@@ -151,13 +146,12 @@ section.timeline-card-content div.card-description > p {
 
 .header {
   font-size: 3em;
-  font-weight: bold;
   margin-bottom: 25px;
   margin-top: 10px;
   width: 100vw;
   margin-bottom: 50px;
-  border-bottom: 10px solid #e6ac27;
-  font-family: 'Helvetica, sans-serif';
+  border-bottom: 8px solid #e6ac27;
+  font-family: 'poppins regular';
 }
 
 .dark-mode .header {
