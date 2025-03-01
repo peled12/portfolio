@@ -15,7 +15,7 @@ import '../css/about.css';
 const TEXT = [
   {
     title: 'About Me',
-    text: '<p>My name is Peled Koren, a 17-year-old junior full-stack developer who lives in Hadera, Israel with hands-on experience in building end-to-end web applications using React, Node.js, MongoDB and plenty of other technologies.</p><p>I am passionate about solving real-world problems through technology and continuously learning to expand my skill set. I am currently working on a project to gain more experience, enhance my existing skills, and explore new technologies, helping me grow as a developer.</p><p>Beyond coding, I enjoy playing basketball and am a dedicated fan of the Milwaukee Bucks NBA team. Combining my love for basketball and web development, I created a Bucks fan page <a href="https://bucks-fan-page.vercel.app/">(link to it)</a>, where users can interact, create content, build their own fantasy rosters and much more.</p><p>This project not only allowed me to channel my passion but also significantly improved my skills in frontend design, API integration, and database management.</p>',
+    text: '<p>My name is Peled Koren, a 17-year-old junior full-stack developer who lives in Hadera, Israel with hands-on experience in building end-to-end web applications using React, Node.js, and plenty of other technologies.</p><p>I am passionate about solving real-world problems through technology and continuously learning to expand my skill set. I am currently working on a project to gain more experience, enhance my existing skills, and explore new technologies, helping me grow as a developer.</p><p>Beyond coding, I enjoy playing basketball and am a dedicated fan of the Milwaukee Bucks NBA team. Combining my love for basketball and web development, I created my favorite project - a Bucks fan page <a href="https://bucks-fan-page.vercel.app/">(link to it)</a>, where users can interact, create content, build their own fantasy rosters and much more.</p>',
   },
   {
     title: 'What I Bring To The Table',
@@ -28,10 +28,8 @@ const TEXT = [
 ];
 
 /*
-  TODO: adapt the text
-  TODO: put a qulitive picture of myself here
-  TODO: include that while buillding my current project, i learned nestJS and has
-        significantly improved my backend skills
+  TODO: add a paragrapgh to the about me that includes what im doing right now - building that
+        project with nestJS and being a student, and also include my hobbies
 */
 
 function About() {
