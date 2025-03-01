@@ -160,6 +160,10 @@ section.timeline-card-content div.card-description > p {
   font-family: 'Helvetica, sans-serif';
 }
 
+.dark-mode .header {
+  border-bottom: 10px solid #f1ddb8;
+}
+
 h2 {
   font-family: 'magic night' !important;
 }

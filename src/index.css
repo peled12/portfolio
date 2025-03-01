@@ -55,3 +55,8 @@ h1::before {
   max-width: 30%;
   border-bottom: 2px solid #e6ac27;
 }
+
+.dark-mode h2::before,
+.dark-mode h1::before {
+  border-bottom: 2px solid #f1ddb8;
+}

@@ -85,6 +85,10 @@
   font-family: 'magic night';
 }
 
+.dark-mode .project-quick-scrolls > h3 {
+  border-bottom: 5px solid #f1ddb8;
+}
+
 .project-quick-scrolls > .project-switcher {
   margin-bottom: 15px;
   font-size: 21px;
