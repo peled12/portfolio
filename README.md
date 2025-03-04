@@ -8,3 +8,5 @@
 - Contact information for collaboration  
 
 **Feel free to explore and reach out!**
+
+You can also check out my [LinkedIn profile](https://www.linkedin.com/in/peled-koren-263019338/)
