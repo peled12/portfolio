@@ -42,8 +42,12 @@ const sections = [
   { title: 'Skills', href: '/skills' },
   { title: 'Education', href: '/education' },
   { title: 'Contact', href: '/contact' },
-  { title: 'Resume', href: '/' }, // TODO: add a real resume url
 ];
+
+const resumeSection = {
+  title: 'Resume',
+  href: 'https://peledkoren.wordpress.com/wp-content/uploads/2025/03/peled-koren-resume.docx',
+};
 
 const logo = {
   height: 45,
@@ -111,6 +115,16 @@ const NavBar = () => {
                 </InternalNavLink>
               )
             )}
+            <ExternalNavLink
+              href={resumeSection.href}
+              download
+              theme={theme}
+              className="navbar__link navbar__link--active"
+              style={{ color: 'white' }}
+              onClick={() => setExpanded(false)}
+            >
+              {resumeSection.title}
+            </ExternalNavLink>
           </Nav>
           <ThemeToggler onClick={() => setExpanded(false)} />
         </Navbar.Collapse>
