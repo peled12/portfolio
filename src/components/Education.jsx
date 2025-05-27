@@ -39,9 +39,8 @@ function Education() {
             There, I successfully completed 3 courses, including one where I
             developed an assembler in C. This project simulated a fake
             'computer' and translated assembly code to machine code, with the
-            ability to display all code errors. Although I'm still awaiting the
-            grade for this course, I look forward to sharing the code with the
-            community as soon as possible!
+            ability to display all code errors. My grade for this project was
+            100%.
           </p>
           <p>
             Most of my Bagrut exams are about to be completed by this summer,
