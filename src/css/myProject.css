@@ -1,0 +1,69 @@
+.project-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-container .project-row {
+  display: flex;
+  width: 100%;
+  height: max-content;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 40px 0;
+}
+
+.dark-mode .project-container .project-row.even {
+  background-color: rgb(35, 35, 35);
+}
+
+.project-container .project-row.even {
+  background-color: #ccc;
+}
+
+.my-project-page .header {
+  margin-top: 4vh;
+}
+
+.project-row .in-row {
+  width: 85%;
+  display: flex;
+  align-items: center;
+  gap: 10%;
+}
+
+.project-row .in-row.even {
+  flex-direction: row-reverse;
+}
+
+.project-container > .seperator {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  transition: 0.3s ease;
+  z-index: 1;
+}
+
+.dark-mode .seperator {
+  background-color: white !important;
+}
+
+.project-container .project-row video {
+  width: 30%;
+  height: 30vh;
+}
+
+.project-container .project-row .text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+}
+
+.project-container .project-row .text > h1 {
+  margin-bottom: 5vh;
+}
+
+.project-container .first-msg {
+  margin-bottom: 8vh;
+}
