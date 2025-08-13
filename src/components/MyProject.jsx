@@ -99,7 +99,6 @@ function MyProject() {
               className={'project-row ' + (index % 2 === 0 ? 'even' : 'odd')}
             >
               <div className={'in-row ' + (index % 2 === 0 ? 'even' : 'odd')}>
-                <video src={obj.vidSrc} controls />
                 <div className="text">
                   <h1>{obj.title}</h1>
                   {obj.text.map((text) => (
