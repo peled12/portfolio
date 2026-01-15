@@ -46,7 +46,7 @@ const sections = [
 
 const resumeSection = {
   title: 'Resume',
-  href: 'https://peledkoren.wordpress.com/wp-content/uploads/2025/03/peled-koren-resume-7.docx',
+  href: 'https://drive.google.com/file/d/1i-uUxxqvtsiMKkDyBWp39tzqNKKaauvy/view?usp=sharing',
 };
 
 const logo = {
